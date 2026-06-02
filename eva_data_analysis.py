@@ -1,6 +1,6 @@
 # https://data.nasa.gov/resource/eva.json (with modifications)
-data_f = open('/home/sarah/Projects/astronaut-analysis/data.json', 'r')
-data_t = open('/home/sarah/Projects/astronaut-analysis/data.csv','w')
+data_f = open('./eva_data.json', 'r')
+data_t = open('./eva_data.csv','w')
 g_file = 'myplot.png'
 
 fieldnames = ("EVA #", "Country", "Crew    ", "Vehicle", "Date", "Duration", "Purpose")
