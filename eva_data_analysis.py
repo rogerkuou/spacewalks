@@ -3,11 +3,6 @@ import csv
 import datetime as dt
 import matplotlib.pyplot as plt
 
-# https://data.nasa.gov/resource/eva.json (with modifications)
-input_file = open('./eva_data.json', 'r', encoding='ascii')
-output_file = open('./eva_data.csv', 'w', encoding='utf-8')
-graph_file = 'eva_graph.png'
-
 
 fieldnames = ("EVA #", "Country", "Crew    ", "Vehicle", "Date", "Duration", "Purpose")
 
