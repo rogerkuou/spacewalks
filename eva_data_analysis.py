@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 import pandas as pd
+import sys
 
 
 def read_json_to_clean_dataframe(file_name):
@@ -39,9 +40,17 @@ def main(input_file, output_file, graph_file):
 
 
 if __name__ == "__main__":  # if dunder name equals dunder main
-    # Data source: https://data.nasa.gov/resource/eva.json (with modifications)
-    input_file = './eva_data.json'
-    output_file = './eva_data.csv'
+
+    if len(sys.argv) >= 3:
+        input_file = sys.argv[1]
+        output_file = sys.argv[2]
+        print("Using custom input and output filenames")
+    else:
+        # Data source: https://data.nasa.gov/resource/eva.json (with modifications)
+        input_file = './eva_data.json'
+        output_file = './eva_data.csv'
+        print("Using default filenames")
+
     graph_file = './cumulative_eva_graph.png'
 
     main(input_file, output_file, graph_file)
