@@ -47,10 +47,10 @@ if __name__ == "__main__":  # if dunder name equals dunder main
         print("Using custom input and output filenames")
     else:
         # Data source: https://data.nasa.gov/resource/eva.json (with modifications)
-        input_file = './eva_data.json'
-        output_file = './eva_data.csv'
+        input_file = './data/eva_data.json'
+        output_file = './results/eva_data.csv'
         print("Using default filenames")
 
-    graph_file = './cumulative_eva_graph.png'
+    graph_file = './results/cumulative_eva_graph.png'
 
     main(input_file, output_file, graph_file)
