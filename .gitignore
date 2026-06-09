@@ -1,3 +1,4 @@
 eva_data.csv
 *.png
 .DS_store
+__pycache__/
