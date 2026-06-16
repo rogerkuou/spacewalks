@@ -35,7 +35,7 @@ def plot_eva_durations(file_name, df):
 def main(input_file, output_file, graph_file):
 
     """
-    Main function to process EVA data and generate outputs.
+    Main function to process eva data and generate outputs.
     
     Args:
         input_file (str): Path to input JSON file containing eva data
