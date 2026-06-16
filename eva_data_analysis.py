@@ -4,6 +4,15 @@ import sys
 
 
 def read_json_to_clean_dataframe(file_name):
+    """
+    Reads a JSON file into a pandas DataFrame, cleans the data, and sorts the DataFrame by date.
+
+    Arguments:
+        file_name : The path to the json file to read.
+
+    Returns:
+        pd.DataFrame: A cleaned and sorted dataframe containing the data from the json file.
+    """
     df = pd.read_json(file_name, convert_dates=['date'], encoding='ascii')
     df['eva'] = df['eva'].astype(float)
     df.dropna(axis=0, subset=['duration', 'date'], inplace=True)
