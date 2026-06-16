@@ -18,6 +18,27 @@ def text_to_duration(duration):
 
 
 def compute_durations(df):
+    """
+    Convert duration to hours and calculate cumulative time.
+
+    Creates a copy of the input df, converts the values in the
+    ``duration`` column to numeric hour values using ``text_to_duration`` function,
+    and computes a running cumulative sum of those durations.
+
+    Parameters
+    ----------
+    df : pandas.DataFrame
+        Input dataframe must contain ``duration`` column in a format modified by ``text_to_duration`` function.
+
+    Returns
+    -------
+    pandas.DataFrame
+        A copy of the input dataframe with two additional columns:
+
+        - ``duration_hours``: Duration converted to hours as a numeric value.
+        - ``cumulative_time``: Running cumulative sum of ``duration_hours``.
+
+    """
     df_copy = df.copy()
     df_copy['duration_hours'] = df_copy['duration'].apply(text_to_duration)
     df_copy['cumulative_time'] = df_copy['duration_hours'].cumsum()
