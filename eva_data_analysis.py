@@ -12,6 +12,7 @@ def read_json_to_clean_dataframe(file_name):
 
 
 def text_to_duration(duration):
+    """Convert a duration string in the format 'HH:MM' to a float representing hours."""
     hours, minutes = duration.split(":")
     duration = int(hours) + int(minutes) / 60
     return duration
