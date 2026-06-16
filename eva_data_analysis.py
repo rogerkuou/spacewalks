@@ -46,6 +46,13 @@ def compute_durations(df):
 
 
 def plot_eva_durations(file_name, df):
+    """
+    Plot the durations of extravehicular activity (EVA) and save the plot. 
+
+    Arguments:
+        file_name: The name of the file the plot is written to.
+        df : Dataframe that contains the date and cumulative duration of the EVAs.
+    """
     plt.plot(df['date'], df['cumulative_time'], 'ko-')
     plt.xlabel('Year')
     plt.ylabel('Total time spent in space to date (hours)')
