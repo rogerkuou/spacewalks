@@ -33,6 +33,19 @@ def plot_eva_durations(file_name, df):
     plt.show()
 
 def main(input_file, output_file, graph_file):
+
+    """
+    Main function to process EVA data and generate outputs.
+    
+    Args:
+        input_file (str): Path to input JSON file containing eva data
+        output_file (str): Path where CSV output will be saved
+        graph_file (str): Path where the graph image will be saved
+    
+    Returns:
+        None
+    """
+    
     eva_df = read_json_to_clean_dataframe(input_file)
     eva_df.to_csv(output_file, index=False, encoding='utf-8')
     eva_df = compute_durations(eva_df)
